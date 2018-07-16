@@ -4,7 +4,7 @@
 
 ## AuthorizedRoute 
 
-一个组件可以让你用更轻松的方式去配置可带访问权限控制的react路由
+一个组件可以让你用更轻松的方式去配置可带问权限控制的react路由
 
 ### 属性
 
@@ -14,14 +14,14 @@
 
     当类型是`string` 或者 `string[]` 的时候， 它代表着你当前用户的角色。运行时，它会与路由配置里面的每一项的`permission`属性进行比对，决定是否有访问的权限。
 
-    当类型是`Function`时候， 他拥有唯一的回调参数`permissions`，取值来自各个路由配置的`permissions`属性， 它执行后返回一个布尔值决定你是否有权限访问。
+    当类型是`Function`时候， 他拥有唯一的回调参数`permissions`，取值来自各个路由配置的`permissions`属性， 它执行后返回一个布尔值决定你是否有权限访问。
 
 
 - #### normalRoutes
 
     类型: `IRouteConfig[]`
 
-    所有角色都可以访问的路由。
+    所有角色都可以访问的路由。
 
 - #### normalLayout
 
@@ -45,7 +45,7 @@
 
     类型: `ReactType`
 
-    路由匹配失败后渲染的组件。
+    路由匹配失败后渲染的组件。
 
 - #### IRouteConfig.redirect
 
@@ -77,11 +77,11 @@
 
     当类型是`string` 或者 `string[]` 的时候， 它代表着你需要检测的角色。运行时，它会第二个参数`permission`属性进行比对，决定是否有访问的权限。
 
-    当类型是`Function`时候， 他拥有唯一的回调参数`permissions`，取值来自第二个参数的`permissions`值， 它执行后返回一个布尔值决定你是否有权限访问。
+    当类型是`Function`时候， 他拥有唯一的回调参数`permissions`，取值来自第二个参数的`permissions`值， 它执行后返回一个布尔值决定你是否有权限访问。
 
 - permissions
 
     type: `string` | `string[]`
 
-    权限所需角色。为空则代表检测的角色不需要匹配，函数将返回true。
+    权限所需角色。为空则代表检测的角色不需要匹配，函数将返回true。
 
