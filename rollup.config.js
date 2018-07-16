@@ -98,7 +98,6 @@ export default {
 
         copy({
             "README.md": "dist/README.md",
-            "docs": "dist/docs",
             verbose: true
         })
     ]
