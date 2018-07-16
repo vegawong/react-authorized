@@ -1,6 +1,6 @@
 {
     "name": "react-authorized",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "A smart package which can control your react-component rendering permission.",
     "main": "lib/index.js",
     "module": "es/index.js",
