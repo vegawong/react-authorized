@@ -5,6 +5,7 @@ import typescriptPlugin from 'rollup-plugin-typescript2'
 import nodeResolve from 'rollup-plugin-node-resolve'
 import commonjs from 'rollup-plugin-commonjs'
 import packageJson from 'rollup-plugin-generate-package-json'
+import copy from 'rollup-plugin-copy';
 import { uglify } from 'rollup-plugin-uglify'
 
 import pkg from './package.json'
@@ -93,6 +94,12 @@ export default {
                 },
                 private: false
             }
+        }),
+
+        copy({
+            "README.md": "dist/README.md",
+            "docs": "dist/docs",
+            verbose: true
         })
     ]
 }
