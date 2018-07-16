@@ -6,10 +6,16 @@
     "module": "es/index.js",
     "scripts": {
         "test": "jest",
+        "cover": "istanbul cover --hook-run-in-context node_modules/.bin/jest --collectCoverage",
+        "travis": "npm run cover",
         "build": "NODE_ENV=production rollup -c"
     },
     "homepage": "https://github.com/vegawong/react-authorized",
-    "keywords": ["react", "authorized", "route"],
+    "keywords": [
+        "react",
+        "authorized",
+        "route"
+    ],
     "author": "vegawong",
     "license": "MIT",
     "devDependencies": {
@@ -20,8 +26,11 @@
         "@types/react-router": "^4.0.28",
         "@types/react-router-dom": "^4.2.7",
         "awesome-typescript-loader": "^5.2.0",
+        "codecov.io": "^0.1.6",
+        "coveralls": "^3.0.2",
         "enzyme": "^3.3.0",
         "enzyme-adapter-react-16": "^1.1.1",
+        "istanbul": "^0.4.5",
         "jest": "^23.4.0",
         "rollup": "^0.62.0",
         "rollup-plugin-commonjs": "^9.1.3",

@@ -1,5 +1,6 @@
 module.exports = {
     moduleFileExtensions: ["js", "ts", "tsx"],
+    coverageReporters: ['lcov'],
     moduleNameMapper: {
       // '\\.(css|scss)$': 'identity-obj-proxy',
       // '@utils\/(.*)': '<rootDir>/src/utils/$1',
