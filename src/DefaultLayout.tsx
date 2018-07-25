@@ -1,5 +1,5 @@
 import * as React from 'react'
 
-const DefaultLayout = props => <div>{props.children}</div>
+const DefaultLayout = props => <>{props.children}</>
 
 export default DefaultLayout
