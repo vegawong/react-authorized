@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Switch, Route, Redirect } from 'react-router-dom'
+import { Switch, Route, Redirect } from 'react-router'
 import { map } from 'lodash'
 import { isNil } from 'lodash'
 import {

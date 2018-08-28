@@ -1,5 +1,5 @@
 import { omit } from 'lodash'
-import { RouteProps } from 'react-router-dom'
+import { RouteProps } from 'react-router'
 
 const OMIT_ROUTE_RENDER_PROPERTIES = ['render', 'component']
 

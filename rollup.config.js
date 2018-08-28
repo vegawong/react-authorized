@@ -27,7 +27,6 @@ export default {
     external: externalLibs,
     output: [
         {
-            
             file: `dist/${pkg.main}`,
             format: 'umd',
             globals: globalLibs,
@@ -90,7 +89,8 @@ export default {
                 repository: pkg.repository || '',
                 dependencies: pkg.dependencies || {},
                 peerDependencies: {
-                    "react": "^0.14.0 || ^15.0.0-0 || ^16.0.0-0"
+                    "react": "^0.14.0 || ^15.0.0-0 || ^16.0.0-0",
+                    "react-router": "^3.0.0-0 || ^4.0.0-0"
                 },
                 private: false
             }
