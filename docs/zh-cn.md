@@ -85,3 +85,55 @@
 
     权限所需角色。为空则代表检测的角色不需要匹配，函数将返回true。
 
+
+## DEMO
+
+```jsx
+/*
+ * 渲染组件
+ */
+
+import React from 'react'
+import { Router } from 'react-router-dom'
+import { AuthorizedRoute } from 'react-authorized/lib'
+
+// 当前角色
+const currAuth = [] // 登录成功后此数组设置成['user']
+
+// 不需要权限访问的路由
+export const normalRoutes: IRoute[] = [
+    {
+        path: '/login',
+        component: Login
+    }
+]
+
+// 需要权限访问的路由
+export const authorizedRoutes: IRoute[] = [
+    {
+        path: '/',
+        component: () => <Redirect to="/workspace" />,
+        permissions: ['user'], // 访问所需权限
+        pathName: '首页',
+        exact: true
+    },
+]
+
+
+class App extends React.Component {
+    render() {
+        return (
+            <Router history={history}>
+                <AuthorizedRoute
+                    authorities={currAuth}
+                    normalRoutes={normalRoutes}
+                    authorizedRoutes={authorizedRoutes}
+                />
+            </Router>
+        )
+    }
+}
+
+
+```
+

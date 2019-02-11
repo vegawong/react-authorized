@@ -84,3 +84,53 @@ A function to check has the permission or not.
 
     Check it's in the permissions you need or not. If it's not setted, it return true.
 
+## DEMO
+
+```jsx
+/*
+ * render component
+ */
+
+import React from 'react'
+import { Router } from 'react-router-dom'
+import { AuthorizedRoute } from 'react-authorized/lib'
+
+// 当前角色
+const currAuth = [] // change to ['user'] when login successfully
+
+// the route does not need authorize
+export const normalRoutes: IRoute[] = [
+    {
+        path: '/login',
+        component: Login
+    }
+]
+
+// the route needed authorize
+export const authorizedRoutes: IRoute[] = [
+    {
+        path: '/',
+        component: () => <Redirect to="/workspace" />,
+        permissions: ['user'], // the permissions which needs to verify
+        pathName: '首页',
+        exact: true
+    },
+]
+
+
+class App extends React.Component {
+    render() {
+        return (
+            <Router history={history}>
+                <AuthorizedRoute
+                    authorities={currAuth}
+                    normalRoutes={normalRoutes}
+                    authorizedRoutes={authorizedRoutes}
+                />
+            </Router>
+        )
+    }
+}
+
+
+```
